@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />\
+    <title>Survey Form</title>
+    <style>
+        body{
+            background-color: aliceblue;
+            font-family: Verdana;
+            text-align: center;
+        }
+        form{
+            background-color: aqua;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px;
+        }
+        .form-control{
+            text-align:left;
+            margin-bottom: 25px;
+        }
+        .form-control input, select, textarea{
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            margin-top: 10px;
+            width: 95%;
+        }
+        .form-control input[type="radio"]{
+            display: inline-block;
+            width: auto;
+        }
+        button {
+            background-color: aqua;
+            border: 1px solid black;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            width: 100%;
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <h1>Survey Form</h1>
+    <form id="form">
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+            <input type="text" id="name" placeholder="Enter your name" />
+        </div>
+
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Age
+            </label>
+            <input type="text" id="age" placeholder="Enter your age" />
+        </div>
+
+        <div class="form-control">
+            <label for="role" id="label-role">
+                Which option best describes you?
+            </label>
+            <select name="role" id="role">
+                <option value="student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="professional">Professional</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="comment">
+                Any Comments or Suggestions regarding the website?
+            </label>
+            <textarea name="comment" id="comment" placeholder="Enter Comment or Suggestion here"> 
+            </textarea>
+        </div>
+        
+        <button type="submit" value="submit">
+            Submit
+        </button>
+
+    </form>
+</body>
+
+</html> 

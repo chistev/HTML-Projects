@@ -1,0 +1,41 @@
+.main-body{
+    display: grid;
+    grid-template-columns: minmax(300px, auto)1fr; /*the 300px and auto are for the navbar, and the 1fr is for the main content.*/
+    grid-template-areas: "navbar mainContent"; /* this determines what goes into the respective columns. navbar for first column and mainContent for the main 
+        content*/
+    grid-gap: 20px;
+}
+
+#navbar{
+    grid-area: navbar; /* this specifies that the navbar is the one specified in the grid-template-areas above.*/
+    position: fixed;
+}
+
+#navbar a {
+    display: block;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px 0; /* 0 for the left and right*/
+    text-decoration: none;
+    color: black;
+}
+
+#main-doc {
+    grid-area: mainContent; /* this specifies that the mainContent is the one specified in the grid-template-areas above.*/
+}
+
+header{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 750px){ /* if it's below 750px, do the following;*/
+    .main-body {
+        display: grid;
+        grid-template-columns: 1fr; /* means span the whole column*/
+        grid-template-areas: "navbar" "mainContent";
+    }
+    #navbar{
+        position: inherit;
+    }
+}
