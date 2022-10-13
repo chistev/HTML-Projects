@@ -1,41 +1,106 @@
-.main-body{
+body {
+    background-color: antiquewhite;
+}
+
+div.main-body {
+    background-color: antiquewhite;
+    margin-right: 300px;
     display: grid;
-    grid-template-columns: minmax(300px, auto)1fr; /*the 300px and auto are for the navbar, and the 1fr is for the main content.*/
-    grid-template-areas: "navbar mainContent"; /* this determines what goes into the respective columns. navbar for first column and mainContent for the main 
-        content*/
+    grid-template-columns: minmax(300px, auto)1fr;
+    grid-template-areas: "navbar mainContent";
     grid-gap: 20px;
 }
 
-#navbar{
-    grid-area: navbar; /* this specifies that the navbar is the one specified in the grid-template-areas above.*/
+#Eminem-Header {
+    text-align: center;
+    font-size: 7vh;
+}
+
+header {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#navbar {
+    grid-area: navbar;
     position: fixed;
+    margin-top: 10px;
 }
 
 #navbar a {
     display: block;
     border: 1px solid black;
     padding: 5px;
-    margin: 10px 0; /* 0 for the left and right*/
+    margin: 10px 0;
     text-decoration: none;
     color: black;
 }
 
+p {
+    text-align: center;
+}
+
+#image-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: beige;
+}
+
+#image {
+    display: block;
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+
+#caption {
+    font-size: 17px;
+}
+
 #main-doc {
-    grid-area: mainContent; /* this specifies that the mainContent is the one specified in the grid-template-areas above.*/
+    grid-area: mainContent;
 }
 
-header{
-    font-size: 1.5rem;
-    font-weight: bold;
+.about-Eminem {
+    font-size: 35px;
+    text-shadow: 5px 5px 10px;
 }
 
-@media screen and (max-width: 750px){ /* if it's below 750px, do the following;*/
-    .main-body {
+#tribute-data {
+    box-shadow: 20px 20px 20px beige;
+    font-family: Georgia;
+    margin: 11px;
+    margin-top: 50px;
+}
+
+#tribute-data > ul li {
+    margin-bottom: 10px;
+}
+
+#tribute-link {
+    text-decoration: none;
+    color: black;
+}
+
+.tribute-link {
+    text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+    div.main-body {
         display: grid;
-        grid-template-columns: 1fr; /* means span the whole column*/
+        grid-template-columns: 1fr;
         grid-template-areas: "navbar" "mainContent";
+        margin-right: 50px;
+        grid-gap: 10px;
     }
-    #navbar{
+
+    #Eminem-Header {
+        text-align: center;
+        font-size: 3.5vh;
+    }
+
+    #navbar {
         position: inherit;
     }
-}
+    }
