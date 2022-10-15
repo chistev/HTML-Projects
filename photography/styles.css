@@ -1,0 +1,213 @@
+body{
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   width: 100%;
+}
+
+.intro {
+    height: 100%; /* means 100% of the viewport*/
+    width: 100%;
+    margin: auto;
+    background: url(https://static.pexels.com/photos/248159/pexels-photo-248159.jpeg) no-repeat 50% 50%; /*the double 50 percent part centers the image*/
+    background-size: cover;
+    display: table;
+}
+
+#menu-icon {
+    width: 30px;
+    height: 26px;
+    display: inline-block;
+    background: url(img/nav-icon.png) center;
+    margin: 50px 0 0 50px;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav:hover ul {
+    display: block;
+    position: absolute;
+}
+
+nav ul, nav:active ul {
+    top: 60px;
+}
+
+nav ul li{
+    font-size: 120%;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+   text-decoration: underline;
+}
+
+nav li{
+    padding: 8px 0 10px 7px;
+}
+
+.intro .inner{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 170%;
+    line-height: 1.6;
+}
+
+.intro .content{
+    max-width: 600px;
+    margin: auto;
+}
+
+h1{
+    font-size: 300%;
+    color: #fff;
+    text-align: center;
+    padding: 2%;
+    text-shadow: 0px 0px 250px #000;
+}
+
+.content p{
+    color: #fff;
+}
+
+.clearfix {
+    clear: both;
+    height: 3%;
+}
+
+.left-col{
+    width: 60%;
+    float: left;
+    margin: 4% 0 4% 4%;
+}
+
+h2{
+    font-size: 200%;
+    color: #2C2C2C;
+    text-align: center;
+}
+
+p{
+    font-family: Raleway;
+    color: #2C2C2C;
+    font-size: 140%;
+    text-align: justify;
+}
+
+.sidebar{
+    width: 26%;
+    float: right;
+    margin: 4%;
+}
+
+.one-third-of-portfolio{
+    width: 29.333333%;
+    padding: 2%;
+    float: left;
+}
+
+img {
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.one-third-of-portfolio:hover{
+    opacity: .6; /* 60% of image and 40% of the white background.*/
+}
+
+.services-contacts p{
+    text-align: center;
+    letter-spacing: 5px;
+    margin-top: 100px;
+}
+
+.break{
+    display: none;
+}
+
+.parallax {
+    background: url(https://static.pexels.com/photos/248159/pexels-photo-248159.jpeg) repeat fixed 100%;
+    opacity: .5;
+}
+
+.parallax-inner{
+    padding-top: 17%;
+}
+
+.services-contacts a {
+    color: black;
+    text-decoration: none;
+}
+
+.social{
+    list-style: none;
+    text-align: center;
+}
+
+.social li {
+    display: inline;
+    padding: 1% 5% 7% 4%;
+    font-size: 270%;
+}
+
+.social i{
+    color: black;
+}
+
+.social i:hover{
+    color: blue;
+}
+
+.second-footer{
+    background-color: #2C2C2C;
+}
+
+.second-footer p{
+    text-align: center;
+    padding: 5%;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px){
+
+    #menu-icon{
+        margin: 26px 0 0 26px;
+    }
+
+    nav ul li{
+        margin-left: -20px;
+        margin-top: -10px;
+    }
+
+    .content h1{
+        font-size: 180%;
+    }
+
+    p{
+        font-size: 120%;
+    }
+
+    .left-col{
+        width: 90%;
+        margin: 0 0 3% 0;
+        padding: 0 2%;
+    }
+    
+    .sidebar{
+        width: 96%;
+        margin-right: 10px;
+    }
+
+    .break{
+        display: block;
+    }
+}
