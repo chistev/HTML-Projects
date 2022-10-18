@@ -1,0 +1,49 @@
+/*IMAGE*/
+
+.docs-head img {
+    width: 200px;
+    justify-self: flex-end;
+}
+
+/*DOCS-MAIN*/
+
+.docs-main h3{
+    margin: 20px 0;
+}
+
+.docs-main .grid{
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main nav li{
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px #ccc solid;
+}
+
+.docs-main nav li:hover{
+    font-weight: bold;
+}
+
+.alert{
+    background: var(--light-color);
+    padding: 10px 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.alert i {
+    margin-right: 10px;
+}
+
+.alert-success{
+    background-color: var(--success-color);
+}
+
+code, pre{
+    background: #333;
+    color: white;
+    padding: 10px;
+}

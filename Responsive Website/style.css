@@ -1,0 +1,355 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: blue;
+    --secondary-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/*NAVBAR*/
+
+.navbar {
+    background-color: var(--primary-color);
+    color: white;
+    height: 70px;
+}
+
+ .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 100%;
+}
+
+ .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.navbar h1 {
+    font-weight: 300;
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar a {
+    color: white;
+    padding: 15px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px white solid;
+}
+
+/*SHOWCASE*/
+
+.showcase {
+    height: 400px;
+    background: var(--primary-color);
+    color: white;
+    position: relative; /* so that if we need to position anything absoloute within it we can*/
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* repeat twice, 1fr*/
+    gap: 20px;
+    
+    /*If you have set your flex-direction to row, then justify-content works on the horizontal axis and align-* properties work on the vertical axis. If you have 
+        set your flex-direction to column, then align-* properties work on the horizontal axis and justify-content works on the vertical axis. */
+    
+    justify-content: center;
+    
+    align-items: center;
+    /*height: 100%;*/
+}
+
+.showcase .grid {
+    /*overflow: visible;*/
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+.showcase h1 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-outline {
+    border: 1px white solid;
+}
+
+.btn-outline:hover{
+    transform: scale(0.98); /* scales it down just a little bit*/
+}
+
+.showcase-form {
+    position: relative; /* we added the relative because we wanted to add a 'top' property. This allows us to position the form relative to where it's supposed to
+        be*/
+    height: 350px;
+    top: 60px;
+    width: 400px;
+    justify-self: flex-end; /*i assume because of the relative positioning, this is the way to adjust the form's position*/
+    z-index: 100; /* makes it appear in front of other elements*/
+    animation: slideInFromRight 1s ease-in;
+}
+
+.card {
+    background: white;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.showcase-form .form-control {
+    margin: 30px 0px;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+.showcase::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: white;
+    transform: skewY(-3deg);
+    --webkit--transform: skewY(-3deg); /*for chrome and safari*/
+    --mozilla--transform: skewY(-3deg);
+    --ms--transform: skewY(-3deg);
+}
+
+/*Stats*/
+
+.stats {
+    margin-top: 100px;
+    animation: slideInFromBottom 1s ease-in;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.stats .grid h3{
+    font-size: 35px;
+}
+
+.stats .grid p{
+    font-size: 20px;
+    font-weight: bold; 
+}
+
+/*CLI*/
+
+.cli .grid{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid > *:first-child{ /*this effect applies to whatever the first child element is. you could just specify 'img' as it is the forst child in this case, but 
+                                this is done this way so that if some other type of item is placed as the first child, the effect would apply just the same.*/
+
+   grid-column: 1 / span 2;
+   grid-row: 1 / span 2;
+}
+
+img {
+    width: 100%;
+}
+
+/*Cloud*/
+
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
+}
+
+.lg {
+    font-size: 3rem;
+}
+
+.lead {
+    font-size: 20px;
+}
+
+.margin-top-and-bottom-1 {
+    margin: 1rem 0;
+}
+
+/* Languages */
+
+.languages .card{
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+
+.languages .flex{
+    flex-wrap: wrap; /*pushes contents if necessary to next line when browser is resized*/
+}
+
+.languages .card h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.languages .card:hover{
+    transform: translateY(-15px) /* moves it along the Y axis. Negative moves it up, positive moves it down.*/
+}
+
+/*Footer*/
+
+.footer .social a {
+    margin: 0 20px;
+}
+
+/*MEDIA QUERY*/
+
+@media (max-width: 768px){
+    .grid, 
+    .showcase .grid, 
+    .stats .grid, 
+    .cli .grid, 
+    .cloud .grid,
+    .features-main .grid,
+    .docs-main .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase {
+        height: auto; /* takes up the height of the container*/
+    }
+
+    .showcase-text{
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .showcase-form{
+        justify-self: center;
+        margin: auto;
+    }
+
+    .cli .grid > *:first-child {
+        grid-column: 1;
+    }
+
+    .features-head, 
+    .features-sub-head,
+    .docs-head{
+        text-align: center;
+    }
+}
+
+/*Animations*/
+
+@keyframes slideInFromLeft{
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.showcase-text{
+    animation: slideInFromLeft 1s ease-in;
+}
