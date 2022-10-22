@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+}
+
+body {
+    background-color: #3c0453;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container{
+    width: 40%;
+}
+
+.accordion-item{
+    background-color: #283042;
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: .5rem 2px .5rem;
+}
+
+.accordion-link{
+    font-size: 1.6rem;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.fa-plus{
+    color: green;
+}
+
+.fa-minus{
+    color: red;
+    display: none;
+}
+
+.fa-plus, .fa-minus{
+    padding: .5rem;
+}
+
+.answer{
+  overflow: hidden;
+  height: 0;
+  position: relative;
+  background-color: #212838;
+  transition: height 650ms;
+}
+
+.answer::before{
+    content:'';
+    position: absolute;
+    width: .6rem;
+    height: 90%;
+    background-color: #8fc400;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+p{
+    font-size: 1.4rem;
+    color: white;
+    padding-left: 10px;
+}
+
+.accordion-item:target .answer{ /*When the accordion item is clicked, the .answer would have the following styles*/
+    height: 8%;
+}
+
+.accordion-item:target .fa-plus{
+    display: none;
+}
+
+.accordion-item:target .fa-minus {
+    display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+    .accordion-item:target .answer {
+        height: 13%;
+    }
+
+    .container{
+        width: 60%;
+    }
+
+}
